@@ -21,13 +21,30 @@
             background-color: #f0f0f0;
         }
         header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: #333;
             color: white;
-            padding: 10px 0;
+            padding: 10px 20px;
             text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #555;
+        }
+        header a:hover {
+            background-color: #777;
         }
         h2 {
             color: #333;
+            text-align: center; /* Центрирование заголовка */
         }
         section {
             margin: 20px;
@@ -45,7 +62,11 @@
 </head>
 <body>
     <header>
+        <a href="https://jejsksjfh.github.io/www.sudebniypravo.oi/">Вернуться назад</a>
+        <!-- Центрирование заголовка -->
+        <div style="flex-grow: 1;"></div>
         Процесс судопроизводства
+        <div style="flex-grow: 1;"></div>
     </header>
 
     <div class="full-screen">
