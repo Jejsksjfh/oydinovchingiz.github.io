@@ -31,6 +31,10 @@
             position: fixed;
             width: 100%;
             top: 0;
+            transition: top 0.3s; /* Добавляем плавную анимацию */
+        }
+        header.hidden {
+            top: -60px; /* Выберите желаемую высоту шторки */
         }
         header a {
             color: white;
@@ -61,7 +65,7 @@
     </style>
 </head>
 <body>
-    <header>
+    <header id="header">
         <a href="https://jejsksjfh.github.io/www.sudebniypravo.oi/">Вернуться назад</a>
         <!-- Центрирование заголовка -->
         <div style="flex-grow: 1;"></div>
@@ -87,5 +91,18 @@
         <p>&copy Ойдинов Чингиз класс 10.4</p>
         <div class="logo"> <img src="images/logo.jpg" alt="Логотип" width="250" height="100"></div>
     </footer>
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("header").style.top = "0";
+            } else {
+                document.getElementById("header").style.top = "-60px"; // Выберите желаемую высоту шторки
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
 </body>
 </html>
